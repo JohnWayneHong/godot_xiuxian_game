@@ -1,0 +1,22 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot import cache (regenerated from source files)
+*.import
+
+# Imported translations (auto-generated)
+*.translation
+
+# Export presets (may contain platform secrets)
+export_presets.cfg
+
+# Export binaries
+*.exe
+*.pck
+
+# WorkBuddy local data
+.workbuddy/
+
+# System files
+.DS_Store
+Thumbs.db

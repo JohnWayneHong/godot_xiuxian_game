@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a3e"/>
+      <stop offset="100%" stop-color="#2d1b4e"/>
+    </linearGradient>
+    <linearGradient id="hat" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7b2dce"/>
+      <stop offset="100%" stop-color="#9b4dff"/>
+    </linearGradient>
+  </defs>
+  <!-- 圆角矩形背景 -->
+  <rect x="4" y="4" width="120" height="120" rx="16" fill="url(#bg)" stroke="#6b3fa0" stroke-width="3"/>
+  <!-- 星星装饰 -->
+  <g fill="#ffd700" opacity="0.8">
+    <polygon points="100,20 102,26 108,26 103,30 105,36 100,32 95,36 97,30 92,26 98,26"/>
+    <polygon points="25,95 26,98 29,98 27,100 28,103 25,101 22,103 23,100 21,98 24,98"/>
+    <polygon points="110,90 111,93 114,93 112,95 113,98 110,96 107,98 108,95 106,93 109,93"/>
+  </g>
+  <!-- 帽子 -->
+  <polygon points="40,48 88,48 70,16 58,16" fill="url(#hat)"/>
+  <!-- 帽檐 -->
+  <ellipse cx="64" cy="48" rx="28" ry="6" fill="#7b2dce"/>
+  <!-- 帽带 -->
+  <rect x="38" y="45" width="52" height="4" rx="2" fill="#ffd700"/>
+  <!-- 帽星 -->
+  <polygon points="66,24 67,28 71,28 68,30 69,34 66,32 63,34 64,30 61,28 65,28" fill="#ffd700"/>
+  <!-- 脸部 -->
+  <ellipse cx="64" cy="62" rx="18" ry="16" fill="#ffd4a0"/>
+  <!-- 眼睛 -->
+  <circle cx="57" cy="60" r="4" fill="white"/>
+  <circle cx="71" cy="60" r="4" fill="white"/>
+  <circle cx="58" cy="60" r="2.5" fill="#1a1a3e"/>
+  <circle cx="72" cy="60" r="2.5" fill="#1a1a3e"/>
+  <!-- 眼睛高光 -->
+  <circle cx="57" cy="59" r="1" fill="white"/>
+  <circle cx="71" cy="59" r="1" fill="white"/>
+  <!-- 腮红 -->
+  <ellipse cx="51" cy="65" rx="3" ry="2" fill="#ff9999" opacity="0.6"/>
+  <ellipse cx="77" cy="65" rx="3" ry="2" fill="#ff9999" opacity="0.6"/>
+  <!-- 微笑 -->
+  <path d="M60 67 Q64 72 68 67" fill="none" stroke="#cc7766" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- 斗篷/身体 -->
+  <polygon points="42,74 86,74 92,108 36,108" fill="#4488cc"/>
+  <polygon points="64,74 86,74 92,108 70,108" fill="#3377bb"/>
+  <!-- 金色纽扣 -->
+  <circle cx="64" cy="84" r="3" fill="#ffd700"/>
+  <circle cx="64" cy="94" r="3" fill="#ffd700"/>
+  <!-- 地面光点 -->
+  <g fill="#88ccff" opacity="0.5">
+    <circle cx="44" cy="115" r="1.5"/>
+    <circle cx="64" cy="118" r="1.5"/>
+    <circle cx="84" cy="115" r="1.5"/>
+    <circle cx="54" cy="112" r="1"/>
+    <circle cx="74" cy="112" r="1"/>
+  </g>
+</svg>

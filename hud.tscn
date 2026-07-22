@@ -1,0 +1,468 @@
+[gd_scene format=3 uid="uid://bjdkryugtxlcq"]
+
+[ext_resource type="FontFile" uid="uid://diyqhlpelu16u" path="res://fonts/Xolonium-Regular.ttf" id="1_37p78"]
+[ext_resource type="Script" uid="uid://dikwo1vrlqvlm" path="res://hud.gd" id="1_64ctp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.06, 0.04, 0.16, 0.95)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.5, 0.35, 0.85, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_size = 20
+shadow_color = Color(0.3, 0.15, 0.6, 0.5)
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_single_btn"]
+bg_color = Color(0.2, 0.7, 0.35, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.95, 0.55, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_size = 10
+shadow_color = Color(0.1, 0.5, 0.2, 0.6)
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duo_btn"]
+bg_color = Color(0.75, 0.45, 0.12, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.7, 0.25, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_size = 10
+shadow_color = Color(0.6, 0.3, 0.05, 0.6)
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_btn"]
+bg_color = Color(0.2, 0.45, 0.55, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.75, 0.85, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_size = 10
+shadow_color = Color(0, 0.25, 0.35, 0.6)
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_leaderboard_btn"]
+bg_color = Color(0.25, 0.4, 0.75, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.4, 0.65, 1, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_size = 10
+shadow_color = Color(0.1, 0.25, 0.6, 0.6)
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_submit_btn"]
+bg_color = Color(0.75, 0.4, 0.12, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.65, 0.25, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 8
+shadow_color = Color(0.6, 0.3, 0.05, 0.5)
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_back_btn"]
+bg_color = Color(0.3, 0.3, 0.45, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.55, 0.75, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 6
+shadow_color = Color(0.15, 0.15, 0.3, 0.4)
+shadow_offset = Vector2(0, 2)
+
+[node name="HUD" type="CanvasLayer" unique_id=2083386703]
+script = ExtResource("1_64ctp")
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=1724399644]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80.0
+offset_right = 80.0
+offset_top = 4.0
+offset_bottom = 86.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 72
+theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
+theme_override_colors/font_shadow_color = Color(0.6, 0.4, 0.05, 0.7)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MessageGlow" type="Label" parent="." unique_id=3030000001]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -118.0
+offset_right = 242.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 64
+theme_override_colors/font_color = Color(0.3, 0.6, 1, 0.25)
+text = "Dodge the Creeps!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Message" type="Label" parent="." unique_id=1789329270]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -240.0
+offset_top = -120.0
+offset_right = 240.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 64
+text = "Dodge the Creeps!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="SingleButton" type="Button" parent="." unique_id=3050000001]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -280.0
+offset_right = 120.0
+offset_bottom = -225.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_single_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "单人模式"
+
+[node name="DuoButton" type="Button" parent="." unique_id=3050000002]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -210.0
+offset_right = 120.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_duo_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "双人模式"
+
+[node name="SettingsButton" type="Button" parent="." unique_id=3060000001]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -140.0
+offset_right = 120.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_settings_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "设  置"
+
+[node name="LeaderboardButton" type="Button" parent="." unique_id=3010919020]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -70.0
+offset_right = 120.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_leaderboard_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 44
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "排行榜"
+
+[node name="MessageTimer" type="Timer" parent="." unique_id=640043003]
+wait_time = 2.0
+
+[node name="RainbowTimer" type="Timer" parent="." unique_id=3030000002]
+wait_time = 0.05
+
+[node name="GameOverPanel" type="PanelContainer" parent="." unique_id=3010000001]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -160.0
+offset_right = 170.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOverPanel" unique_id=3010000002]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="Title" type="Label" parent="GameOverPanel/VBoxContainer" unique_id=3010000003]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1, 0.4, 0.3, 1)
+theme_override_colors/font_shadow_color = Color(0.6, 0.1, 0, 0.5)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "游戏结束!"
+horizontal_alignment = 1
+
+[node name="ScoreDisplay" type="Label" parent="GameOverPanel/VBoxContainer" unique_id=3010000004]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 40
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+text = "得分: 0"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="GameOverPanel/VBoxContainer" unique_id=3010000005]
+visible = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 32
+placeholder_text = "输入你的名字"
+max_length = 8
+custom_minimum_size = Vector2(200, 50)
+
+[node name="SubmitButton" type="Button" parent="GameOverPanel/VBoxContainer" unique_id=3010000006]
+visible = false
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_submit_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "保存排行"
+
+[node name="StatusLabel" type="Label" parent="GameOverPanel/VBoxContainer" unique_id=3010000007]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 28
+theme_override_colors/font_color = Color(0.7, 0.7, 0.7, 1)
+text = "查询排行榜中..."
+horizontal_alignment = 1
+
+[node name="ButtonRow" type="HBoxContainer" parent="GameOverPanel/VBoxContainer" unique_id=3010000008]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 12
+
+[node name="MenuButton" type="Button" parent="GameOverPanel/VBoxContainer/ButtonRow" unique_id=3010000009]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_back_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "返回主菜单"
+size_flags_horizontal = 3
+
+[node name="ViewLeaderboardButton" type="Button" parent="GameOverPanel/VBoxContainer/ButtonRow" unique_id=3010000010]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_leaderboard_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "排行榜"
+size_flags_horizontal = 3
+
+[node name="LeaderboardPanel" type="PanelContainer" parent="." unique_id=3020000001]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -230.0
+offset_right = 180.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LeaderboardPanel" unique_id=3020000002]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="LeaderboardPanel/VBoxContainer" unique_id=3020000003]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 48
+theme_override_colors/font_color = Color(1, 0.85, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0.6, 0.4, 0, 0.5)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+text = "🌍 全球排行"
+horizontal_alignment = 1
+
+[node name="Entries" type="VBoxContainer" parent="LeaderboardPanel/VBoxContainer" unique_id=3020000004]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 6
+
+[node name="BackButton" type="Button" parent="LeaderboardPanel/VBoxContainer" unique_id=3020000005]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_back_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 36
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "返回"
+
+[node name="SettingsPanel" type="PanelContainer" parent="." unique_id=3060000100]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -140.0
+offset_right = 190.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingsPanel" unique_id=3060000101]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+alignment = 1
+theme_override_constants/separation = 14
+
+[node name="Title" type="Label" parent="SettingsPanel/VBoxContainer" unique_id=3060000102]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 42
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "⚙️ 设置"
+horizontal_alignment = 1
+
+[node name="P1Row" type="HBoxContainer" parent="SettingsPanel/VBoxContainer" unique_id=3060000103]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsPanel/VBoxContainer/P1Row" unique_id=3060000104]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(0.4, 0.7, 1.0, 1)
+text = "P1 颜色"
+horizontal_alignment = 1
+size_flags_horizontal = 3
+
+[node name="P1ColorPicker" type="ColorPickerButton" parent="SettingsPanel/VBoxContainer/P1Row" unique_id=3060000105]
+layout_mode = 2
+color = Color(0.4, 0.7, 1, 1)
+
+[node name="P2Row" type="HBoxContainer" parent="SettingsPanel/VBoxContainer" unique_id=3060000106]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="SettingsPanel/VBoxContainer/P2Row" unique_id=3060000107]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1.0, 0.35, 0.3, 1)
+text = "P2 颜色"
+horizontal_alignment = 1
+size_flags_horizontal = 3
+
+[node name="P2ColorPicker" type="ColorPickerButton" parent="SettingsPanel/VBoxContainer/P2Row" unique_id=3060000108]
+layout_mode = 2
+color = Color(1, 0.35, 0.3, 1)
+
+[node name="SettingsBackButton" type="Button" parent="SettingsPanel/VBoxContainer" unique_id=3060000109]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_back_btn")
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "返回"
+
+[connection signal="pressed" from="SingleButton" to="." method="_on_single_button_pressed"]
+[connection signal="pressed" from="DuoButton" to="." method="_on_duo_button_pressed"]
+[connection signal="pressed" from="SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="LeaderboardButton" to="." method="_on_leaderboard_button_pressed"]
+[connection signal="timeout" from="MessageTimer" to="." method="_on_message_timer_timeout"]
+[connection signal="timeout" from="RainbowTimer" to="." method="_on_rainbow_timer_timeout"]
+[connection signal="pressed" from="GameOverPanel/VBoxContainer/SubmitButton" to="." method="_on_submit_button_pressed"]
+[connection signal="pressed" from="GameOverPanel/VBoxContainer/ButtonRow/MenuButton" to="." method="_on_game_over_menu_pressed"]
+[connection signal="pressed" from="GameOverPanel/VBoxContainer/ButtonRow/ViewLeaderboardButton" to="." method="_on_game_over_leaderboard_pressed"]
+[connection signal="pressed" from="LeaderboardPanel/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="SettingsPanel/VBoxContainer/SettingsBackButton" to="." method="_on_settings_back_pressed"]
+[connection signal="color_changed" from="SettingsPanel/VBoxContainer/P1Row/P1ColorPicker" to="." method="_on_p1_color_changed"]
+[connection signal="color_changed" from="SettingsPanel/VBoxContainer/P2Row/P2ColorPicker" to="." method="_on_p2_color_changed"]
