@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 428 720" width="428" height="720">
+  <defs>
+    <!-- 夜空渐变 -->
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a2e"/>
+      <stop offset="40%" stop-color="#1a1040"/>
+      <stop offset="70%" stop-color="#2d1b4e"/>
+      <stop offset="100%" stop-color="#1a0f2e"/>
+    </linearGradient>
+    <!-- 远山渐变 -->
+    <linearGradient id="mtn_far" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2050" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a1035" stop-opacity="0.6"/>
+    </linearGradient>
+    <linearGradient id="mtn_mid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1540" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#140d28" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="mtn_near" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#15102a" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#0a0818" stop-opacity="0.95"/>
+    </linearGradient>
+    <!-- 月亮光晕 -->
+    <radialGradient id="moon_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fffbe6" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#ffe8a0" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffe8a0" stop-opacity="0"/>
+    </radialGradient>
+    <!-- 云雾渐变 -->
+    <linearGradient id="mist" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b7db8" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#c4b5e8" stop-opacity="0.12"/>
+      <stop offset="70%" stop-color="#c4b5e8" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8b7db8" stop-opacity="0"/>
+    </linearGradient>
+    <!-- 符文光晕 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 夜空底色 -->
+  <rect width="428" height="720" fill="url(#sky)"/>
+
+  <!-- 星星 -->
+  <g fill="#fffbe6" opacity="0.7">
+    <circle cx="30" cy="40" r="1" opacity="0.8"/>
+    <circle cx="80" cy="80" r="0.8" opacity="0.5"/>
+    <circle cx="150" cy="25" r="1.2" opacity="0.9"/>
+    <circle cx="220" cy="60" r="0.7" opacity="0.4"/>
+    <circle cx="300" cy="35" r="1" opacity="0.6"/>
+    <circle cx="370" cy="70" r="0.9" opacity="0.7"/>
+    <circle cx="50" cy="120" r="0.6" opacity="0.3"/>
+    <circle cx="120" cy="100" r="0.8" opacity="0.5"/>
+    <circle cx="280" cy="110" r="0.7" opacity="0.4"/>
+    <circle cx="390" cy="130" r="1" opacity="0.6"/>
+    <circle cx="200" cy="15" r="0.5" opacity="0.3"/>
+    <circle cx="340" cy="15" r="0.8" opacity="0.5"/>
+    <circle cx="60" cy="160" r="0.6" opacity="0.4"/>
+    <circle cx="250" cy="150" r="0.9" opacity="0.6"/>
+  </g>
+
+  <!-- 月亮 -->
+  <circle cx="340" cy="80" r="50" fill="url(#moon_glow)"/>
+  <circle cx="340" cy="80" r="22" fill="#fffbe6" opacity="0.9" filter="url(#glow)"/>
+  <!-- 月中桂树/阴影 -->
+  <circle cx="335" cy="72" r="6" fill="#e8d8a0" opacity="0.3"/>
+  <circle cx="348" cy="85" r="4" fill="#e8d8a0" opacity="0.25"/>
+  <circle cx="338" cy="90" r="3" fill="#e8d8a0" opacity="0.2"/>
+
+  <!-- 远山脉层 -->
+  <path d="M0,300 Q60,240 120,270 Q180,200 250,250 Q320,210 380,260 Q410,240 428,280 L428,400 L0,400 Z" fill="url(#mtn_far)"/>
+  <!-- 中层山脉 -->
+  <path d="M0,380 Q50,320 100,350 Q160,280 220,330 Q280,290 340,340 Q390,310 428,350 L428,480 L0,480 Z" fill="url(#mtn_mid)"/>
+  <!-- 近山 -->
+  <path d="M0,460 Q70,400 140,440 Q200,370 280,420 Q350,390 428,430 L428,560 L0,560 Z" fill="url(#mtn_near)"/>
+
+  <!-- 山间云雾 -->
+  <rect x="-20" y="340" width="468" height="30" fill="url(#mist)" rx="15"/>
+  <rect x="-20" y="420" width="468" height="20" fill="url(#mist)" rx="10" opacity="0.6"/>
+  <rect x="-20" y="500" width="468" height="25" fill="url(#mist)" rx="12" opacity="0.5"/>
+
+  <!-- 仙云缭绕 -->
+  <g opacity="0.15" fill="#d4c4f0">
+    <ellipse cx="80" cy="200" rx="60" ry="15"/>
+    <ellipse cx="120" cy="195" rx="40" ry="12"/>
+    <ellipse cx="300" cy="180" rx="50" ry="12"/>
+    <ellipse cx="260" cy="175" rx="35" ry="10"/>
+    <ellipse cx="60" cy="280" rx="45" ry="10"/>
+    <ellipse cx="380" cy="260" rx="55" ry="13"/>
+  </g>
+
+  <!-- 古风楼阁剪影 (左下) -->
+  <g fill="#0d0a1a" opacity="0.9">
+    <!-- 楼阁基座 -->
+    <rect x="10" y="520" width="80" height="80" rx="2"/>
+    <!-- 第一层屋檐 -->
+    <path d="M0,520 L100,520 L90,505 L10,505 Z"/>
+    <path d="M-5,505 L105,505 L100,498 L0,498 Z"/>
+    <!-- 第二层 -->
+    <rect x="20" y="475" width="60" height="28" rx="1"/>
+    <path d="M12,475 L88,475 L80,462 L20,462 Z"/>
+    <!-- 塔顶 -->
+    <path d="M35,462 L65,462 L50,440 Z"/>
+    <!-- 飞檐翘角 -->
+    <path d="M-5,505 Q-10,498 -3,495" stroke="#0d0a1a" stroke-width="2" fill="none"/>
+    <path d="M105,505 Q110,498 103,495" stroke="#0d0a1a" stroke-width="2" fill="none"/>
+    <path d="M12,475 Q5,468 8,465" stroke="#0d0a1a" stroke-width="1.5" fill="none"/>
+    <path d="M88,475 Q95,468 92,465" stroke="#0d0a1a" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- 漂浮的灵气粒子 -->
+  <g fill="#7ec8e3" opacity="0.4" filter="url(#glow)">
+    <circle cx="150" cy="350" r="2"/>
+    <circle cx="200" cy="300" r="1.5"/>
+    <circle cx="350" cy="400" r="2"/>
+    <circle cx="100" cy="450" r="1.5"/>
+    <circle cx="300" cy="550" r="2"/>
+    <circle cx="180" cy="500" r="1"/>
+    <circle cx="250" cy="380" r="1.5"/>
+    <circle cx="380" cy="500" r="1"/>
+  </g>
+
+  <!-- 底部地面暗色 -->
+  <rect x="0" y="620" width="428" height="100" fill="#080612" opacity="0.6"/>
+
+  <!-- 符文圆环装饰 (右下, 半透明) -->
+  <g transform="translate(380,680)" opacity="0.08" stroke="#a080ff" stroke-width="1.5" fill="none">
+    <circle r="40"/>
+    <circle r="32"/>
+    <circle r="24"/>
+    <line x1="-40" y1="0" x2="-24" y2="0"/>
+    <line x1="24" y1="0" x2="40" y2="0"/>
+    <line x1="0" y1="-40" x2="0" y2="-24"/>
+    <line x1="0" y1="24" x2="0" y2="40"/>
+  </g>
+
+  <!-- 左上符文装饰 -->
+  <g transform="translate(40,40)" opacity="0.06" stroke="#a080ff" stroke-width="1" fill="none">
+    <circle r="25"/>
+    <path d="M-18,0 Q0,-18 18,0 Q0,18 -18,0"/>
+  </g>
+</svg>

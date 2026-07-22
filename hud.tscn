@@ -2,6 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://diyqhlpelu16u" path="res://fonts/Xolonium-Regular.ttf" id="1_37p78"]
 [ext_resource type="Script" uid="uid://dikwo1vrlqvlm" path="res://hud.gd" id="1_64ctp"]
+[ext_resource type="Texture2D" path="res://art/menu_bg.png" id="3_menubg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
 bg_color = Color(0.06, 0.04, 0.16, 0.95)
@@ -19,64 +20,79 @@ shadow_color = Color(0.3, 0.15, 0.6, 0.5)
 shadow_offset = Vector2(0, 4)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_single_btn"]
-bg_color = Color(0.2, 0.7, 0.35, 1)
+bg_color = Color(0.15, 0.10, 0.22, 0.92)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.4, 0.95, 0.55, 1)
-corner_radius_top_left = 14
-corner_radius_top_right = 14
-corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
-shadow_size = 10
-shadow_color = Color(0.1, 0.5, 0.2, 0.6)
+border_color = Color(0.75, 0.60, 0.25, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 12
+shadow_color = Color(0.5, 0.35, 0.05, 0.5)
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_duo_btn"]
-bg_color = Color(0.75, 0.45, 0.12, 1)
+bg_color = Color(0.15, 0.10, 0.22, 0.92)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(1, 0.7, 0.25, 1)
-corner_radius_top_left = 14
-corner_radius_top_right = 14
-corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
-shadow_size = 10
-shadow_color = Color(0.6, 0.3, 0.05, 0.6)
+border_color = Color(0.65, 0.35, 0.80, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 12
+shadow_color = Color(0.4, 0.15, 0.55, 0.5)
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_settings_btn"]
-bg_color = Color(0.2, 0.45, 0.55, 1)
+bg_color = Color(0.15, 0.10, 0.22, 0.92)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.25, 0.75, 0.85, 1)
-corner_radius_top_left = 14
-corner_radius_top_right = 14
-corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
-shadow_size = 10
-shadow_color = Color(0, 0.25, 0.35, 0.6)
+border_color = Color(0.35, 0.65, 0.75, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 12
+shadow_color = Color(0.1, 0.3, 0.45, 0.4)
 shadow_offset = Vector2(0, 3)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_leaderboard_btn"]
-bg_color = Color(0.25, 0.4, 0.75, 1)
+bg_color = Color(0.15, 0.10, 0.22, 0.92)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.4, 0.65, 1, 1)
-corner_radius_top_left = 14
-corner_radius_top_right = 14
-corner_radius_bottom_right = 14
-corner_radius_bottom_left = 14
-shadow_size = 10
-shadow_color = Color(0.1, 0.25, 0.6, 0.6)
+border_color = Color(0.35, 0.55, 0.85, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 12
+shadow_color = Color(0.1, 0.2, 0.55, 0.4)
 shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_showcase"]
+bg_color = Color(0.08, 0.05, 0.15, 0.7)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7, 0.55, 0.2, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_size = 10
+shadow_color = Color(0.4, 0.25, 0.05, 0.4)
+shadow_offset = Vector2(0, 2)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_submit_btn"]
 bg_color = Color(0.75, 0.4, 0.12, 1)
@@ -110,6 +126,77 @@ shadow_offset = Vector2(0, 2)
 
 [node name="HUD" type="CanvasLayer" unique_id=2083386703]
 script = ExtResource("1_64ctp")
+
+[node name="MenuBG" type="TextureRect" parent="."]
+texture = ExtResource("3_menubg")
+expand_mode = 1
+stretch_mode = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+visible = false
+
+[node name="MenuFX" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+mouse_filter = 2
+visible = false
+
+[node name="MenuFXTimer" type="Timer" parent="."]
+wait_time = 0.033
+autostart = false
+
+[node name="CharShowcase" type="Control" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -230.0
+offset_right = 100.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+visible = false
+
+[node name="ShowcaseFrame" type="PanelContainer" parent="CharShowcase"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_showcase")
+
+[node name="VBox" type="VBoxContainer" parent="CharShowcase/ShowcaseFrame"]
+layout_mode = 2
+alignment = 1
+theme_override_constants/separation = 4
+
+[node name="SpriteHolder" type="CenterContainer" parent="CharShowcase/ShowcaseFrame/VBox"]
+layout_mode = 2
+custom_minimum_size = Vector2(0, 100)
+
+[node name="CharName" type="Label" parent="CharShowcase/ShowcaseFrame/VBox"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_37p78")
+theme_override_font_sizes/font_size = 20
+theme_override_colors/font_color = Color(1, 0.88, 0.45, 1)
+text = "剑修·凌霄"
+horizontal_alignment = 1
+
+[node name="CharTitle" type="Label" parent="CharShowcase/ShowcaseFrame/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+theme_override_colors/font_color = Color(0.7, 0.65, 0.85, 1)
+text = "御剑乘风"
+horizontal_alignment = 1
 
 [node name="ScoreLabel" type="Label" parent="." unique_id=1724399644]
 anchors_preset = 5
@@ -466,3 +553,5 @@ text = "返回"
 [connection signal="pressed" from="SettingsPanel/VBoxContainer/SettingsBackButton" to="." method="_on_settings_back_pressed"]
 [connection signal="color_changed" from="SettingsPanel/VBoxContainer/P1Row/P1ColorPicker" to="." method="_on_p1_color_changed"]
 [connection signal="color_changed" from="SettingsPanel/VBoxContainer/P2Row/P2ColorPicker" to="." method="_on_p2_color_changed"]
+[connection signal="timeout" from="MenuFXTimer" to="." method="_on_menu_fx_timer_timeout"]
+[connection signal="draw" from="MenuFX" to="." method="_on_menu_fx_draw"]
